@@ -1,0 +1,18 @@
+# Week 3 - MPI
+# Part 1: MPI Hello World
+A new version of the "hello_mpi.c" script was created.
+This takes a value, n, as the size of the ranks.
+As this programme was time benchmarked, it was seen that the user and system times combined where greater than the real time.
+This shows the occurence of parallel processing.
+
+# Part 2: MPI breakdown
+Documenting code:
+main() - function reads and validates inputs, as well as initialising error handelling and the MPI function.
+
+root_task():
+Function receives a value from all processors and add all values, outputting the final result.
+
+client_task()
+
+check_args():
+Ensures that user provided one number and converts it to a string, exits if it's an invalid number.
