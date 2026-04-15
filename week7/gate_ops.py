@@ -78,17 +78,17 @@ TOFF_gate = np.array([[1, 0, 0, 0, 0, 0, 0, 0], # Toffoli gate
                      [0, 0, 0, 0, 0, 0, 0, 1],
                      [0, 0, 0, 0, 0, 0, 1, 0]])
 
-
 def gate_choice(value):
     global workspace
-    if value=="1":
-        workspace=np.array([[1.]])
-		pushQubit([1,0])
-		print(f"before gate: {workspace}")
-		applyGate(X_gate)
-		print(f"after gate: {workspace}")
 
-    elif value=="2":
+    if value == "1":
+        workspace = np.array([[1.]])
+        pushQubit([1, 0])
+        print(f"before gate: {workspace}")
+        applyGate(X_gate)
+        print(f"after gate: {workspace}")
+
+    elif value == "2":
         workspace = np.array([[1.+0j]])
         pushQubit([1, 0])
         print(f"before gate: {workspace}")
@@ -119,11 +119,11 @@ def gate_choice(value):
     elif value == "6":
         workspace = np.array([[1.+0j]])
         pushQubit([1, 0])
-		applyGate(H_gate)
         print("before:", workspace)
+        applyGate(H_gate)
         applyGate(T_gate)
         print("after: ", workspace)
 
+
 value = input("choose gate between 1-6: ").strip()
 gate_choice(value)
-
